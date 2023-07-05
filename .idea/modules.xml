@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SeleniumWebdriver/MasterClassQazando.iml" filepath="$PROJECT_DIR$/SeleniumWebdriver/MasterClassQazando.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SeleniumWebdriver/RitainClass.iml" filepath="$PROJECT_DIR$/SeleniumWebdriver/RitainClass.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ritain_challenge.iml" filepath="$PROJECT_DIR$/.idea/ritain_challenge.iml" />
     </modules>
   </component>

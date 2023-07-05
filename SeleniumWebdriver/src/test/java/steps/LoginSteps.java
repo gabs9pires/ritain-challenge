@@ -13,10 +13,9 @@ public class LoginSteps extends RunCucumber {
     @Dado("^que estou na tela de login$")
     public void que_estou_na_tela_de_login() {
         loginPage.acessarAplicao();
-        loginPage.acessarTelaLogin();
     }
 
-    @Quando("^preencho login \"([^\"]*)\" e senha \"([^\"]*)\"")
+    @Quando("^preencho login '(.*)' e senha '(.*)'$")
     public void preencho_login_e_senha(String email, String senha) {
         loginPage.preencheEmail(email);
         loginPage.preencherSenha(senha);
@@ -29,26 +28,6 @@ public class LoginSteps extends RunCucumber {
 
     @Entao("^vejo mensagem de login com sucesso$")
     public void vejo_mensagem_login_sucesso() {
-        loginPage.verificaLoginSucesso();
-    }
-
-    @Entao("^vejo mensagem \"([^\"]*)\" de campo nao preenchido$")
-    public void vejo_mensagem_de_campo_nao_preenchido(String message)  {
-        loginPage.verificaCampoVazio(message);
-    }
-
-    @Quando("^acesso a tela de cadastro de usuario$")
-    public void acesso_a_tela_de_cadastro_de_usuario() {
-        loginPage.acessarTelaCadastro();
-    }
-
-    @Dado("^que estou logado na aplicacao com user \"([^\"]*)\" e senha \"([^\"]*)\"$")
-    public void que_estou_logado_na_aplicacao_com_user_e_senha(String email, String senha)  {
-        loginPage.acessarAplicao();
-        loginPage.acessarTelaLogin();
-        loginPage.preencheEmail(email);
-        loginPage.preencherSenha(senha);
-        loginPage.clicarLogin();
         loginPage.verificaLoginSucesso();
     }
 

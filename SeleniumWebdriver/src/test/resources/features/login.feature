@@ -6,9 +6,14 @@
     Quero fazer login
     Para fazer uma compra no site
 
-    @login-sucesso
-    Cenário: Login com sucesso
+    Esquema do Cenario: Login - sucesso
       Dado que estou na tela de login
-      Quando preencho login "eduardo.finotti@qazando.com" e senha "123456"
+      Quando preencho login '<usuario>' e senha '<senha>'
       E clico em Login
       Então vejo mensagem de login com sucesso
+
+      Exemplos:
+      |   usuario   |    senha   |
+      |standard_user|secret_sauce|
+
+

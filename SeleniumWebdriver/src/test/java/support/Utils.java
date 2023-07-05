@@ -1,5 +1,6 @@
 package support;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -9,20 +10,13 @@ import java.util.Random;
 
 public class Utils extends RunCucumber {
 
-    public static void waitElementBePresent(By element, Integer tempo) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), tempo);
-        wait.until(ExpectedConditions.elementToBeClickable(element));
+    public void logarSite(){
+        driver.get("https://www.saucedemo.com/");
+        Assert.assertEquals(true, driver.findElement(By.id("login_button_container")).isDisplayed());
     }
-
-    public static String getRandomEmail() {
-        String email_init = "qazando_";
-        String email_final = "@qazando.com.br";
-
-        Random random = new Random();
-        int minimo = 1;
-        int maximo = 999999999;
-        int resultado = random.nextInt(maximo-minimo) + minimo;
-
-        return email_init + resultado + email_final;
+    public void fazerLoginUserDefault(){
+        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+        driver.findElement(By.id("login-button")).click();
     }
 }

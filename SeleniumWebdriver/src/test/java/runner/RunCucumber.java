@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
         plugin = {"json:target/reports/cucumberTests.json", "html:target/reports/"},
         features = "src/test/resources/features",
         glue = {"steps"}
-       // tags = {"@cadastro_usuario_sucesso"}
+       // tags = {""}
 )
 public class RunCucumber extends RunBase{
     public static WebDriver driver;

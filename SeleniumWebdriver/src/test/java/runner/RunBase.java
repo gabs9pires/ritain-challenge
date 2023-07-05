@@ -19,12 +19,9 @@ public class RunBase {
         if (driver !=  null) {
             driver.quit();
         }
-/*Para passar o browser como parametro quando executamos aqui pela IDE e não pelo run cucumber
-  é só ir ali em RunCucumber na seta para baixo e entrar em edit configurations
-  no textbox ali em ea passar o mesmo parametro da linha de comando -Dbrowser=chrome ou =firefox
-  comando no terminar = mvn test -Dtest=RunCucumber -Dbrowser=chrome cluecumber-report:reporting
 
- */
+    //comando no terminal = mvn test -Dtest=RunCucumber -Dbrowser=chrome cluecumber-report:reporting
+
         switch (browser) {
             case "chrome":
                 driver = new ChromeDriver();
