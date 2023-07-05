@@ -16,7 +16,6 @@ public class LoginPage extends Utils {
     private By campoSenha = By.id("password");
 
     private By botaoFazerLogin = By.id("login-button");
-    private By botaoAcessarCadastro = By.cssSelector(".right_list_fix > li > a > .fa-lock");
 
     // ações / funções / métodos
     public void acessarAplicao() {
@@ -40,13 +39,5 @@ public class LoginPage extends Utils {
         Assert.assertEquals("Os textos não são iguais!", "Products", textoLoginSucesso);
     }
 
-    public void verificaCampoVazio(String message){
-        String textError = getDriver().findElement(By.className("invalid_input")).getText();
-        Assert.assertEquals(message, textError);
-    }
-
-    public void acessarTelaCadastro(){
-        getDriver().findElement(botaoAcessarCadastro).click();
-    }
 
 }
